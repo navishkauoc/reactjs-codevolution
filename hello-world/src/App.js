@@ -4,22 +4,24 @@ import Hello from './components/Hello';
 import Message from './components/Message';
 import Welcome from './components/Welcome';
 import Counter from './components/Counter';
+import FunctionClick from './components/FunctionClick';
 
 function App() {
   return (
     <div className="App">
+      <FunctionClick />
       {/* <Counter /> */}
       {/* <Message /> */}
-      <Greet name="Bruce" heroName="Batman">
+      {/* <Greet name="Bruce" heroName="Batman">
         <p>This is children props</p>
-      </Greet>
+      </Greet> */}
       {/* <Greet name="Clark" heroName="Superman">
         <button>Action</button>
       </Greet>
       <Greet name="Diana" heroName="Wonder Woman" />
       <Welcome name="Bruce" heroName="Batman" />
       <Welcome name="Clark" heroName="Superman" /> */}
-      <Welcome name="Diana" heroName="Wonder Woman" />
+      {/* <Welcome name="Diana" heroName="Wonder Woman" /> */}
       {/*<Hello /> */}
     </div>
   );

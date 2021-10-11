@@ -10,7 +10,6 @@ class EventBind extends Component {
         }
     }
 
-    //Using 'bind' keyword and binding the handler in the render() method
     clickHandler() {
         this.setState({
             message: 'Goodbye!'
@@ -20,9 +19,16 @@ class EventBind extends Component {
 
     render() {
         return (
+            //Option 01: Using 'bind' keyword and binding the handler in the render() method
+            // <div>
+            //     <div>{this.state.message}</div>
+            //     <button onClick={this.clickHandler.bind(this)}>Click</button>
+            // </div>
+
+            //Option 02: Using arrow functions in render() method
             <div>
                 <div>{this.state.message}</div>
-                <button onClick={this.clickHandler.bind(this)}>Click</button>
+                <button onClick={() => this.clickHandler()}>Click</button>
             </div>
         )
     }

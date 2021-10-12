@@ -8,6 +8,8 @@ class EventBind extends Component {
         this.state = {
              message: 'Hello'
         }
+
+        this.clickHandler = this.clickHandler.bind(this)
     }
 
     clickHandler() {
@@ -26,9 +28,15 @@ class EventBind extends Component {
             // </div>
 
             //Option 02: Using arrow functions in render() method
+            // <div>
+            //     <div>{this.state.message}</div>
+            //     <button onClick={() => this.clickHandler()}>Click</button>
+            // </div>
+
+            //Option 03: Binding the event handler in the constructor
             <div>
                 <div>{this.state.message}</div>
-                <button onClick={() => this.clickHandler()}>Click</button>
+                <button onClick={this.clickHandler}>Click</button>
             </div>
         )
     }

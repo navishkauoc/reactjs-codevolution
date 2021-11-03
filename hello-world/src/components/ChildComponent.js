@@ -3,7 +3,7 @@ import React from 'react'
 function ChildComponent() {
     return (
         <div>
-            <button>Greet Parernt</button>
+            <button>Greet Parent</button>
         </div>
     )
 }
